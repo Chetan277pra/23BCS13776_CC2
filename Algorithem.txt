@@ -1,0 +1,24 @@
+
+Algorithm for the code:
+1. Start
+2. get low = min(a, b)
+3. high = min(a,b)*n
+
+We have limit on which we'll apply binary search 
+
+l = (long)(a/gcd(a, b)*b) //This is lcm to subtract multiple counts
+
+while(low<high)
+    mid = low + (high-low)/2
+
+    count = (mid / a) + (mid / b) - (mid / l)
+
+    if (count < n) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+
+return count
+
+5.  bbbbEND
