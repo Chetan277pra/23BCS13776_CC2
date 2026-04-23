@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trie Visual Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-one" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-two" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">Data Structures Demo</p>
+        <h1>Trie Insert + Search</h1>
+        <p class="subtitle">
+          Insert lowercase words into a trie, then search instantly.
+        </p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label for="wordInput">Word</label>
+          <input
+            id="wordInput"
+            type="text"
+            placeholder="e.g. apple"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="actions">
+          <button id="insertBtn" class="btn btn-primary">Insert</button>
+          <button id="searchBtn" class="btn btn-outline">Search</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </section>
+
+      <section class="card small-card">
+        <h2>Inserted Words</h2>
+        <ul id="wordList" class="word-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
